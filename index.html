@@ -133,8 +133,61 @@
                 <p style="color: #fafafa;">What's an algorithm that you use?</p>
                 <p style="color: #fafafa;">What are the steps for doing it?</p>
             </section>
-            <section>
+
+            <!-- TIME COMPLEXITY: AMELIA -->
+ <section>
               <h2>Example: Hanging up Laundry</h2>
+              <ol>
+                <li class="fragment">Dump laundry on floor
+              </ol>
+            </section>
+            <section>
+              <h2>Hanging Up Laundry: Code</h2>
+              <pre><code>
+            laundry.drop()
+            </code></pre>
+            </section>
+            <section>
+              <h2>Laundry: Time Complexity</h2>
+              <p class="green">How long does the algorithm take?</p>
+              <p class="fragment">
+                Dumping out my laundry takes 2 seconds
+              </p>
+              <table class="fragment" style="margin:auto; background:white; padding: 5px;">
+                <thead>
+                    <tr>
+                        <th># items</th>
+                        <th># Seconds</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="fragment">
+                        <td>4</td>
+                        <td>2</td>
+                    </tr>
+                    <tr class="fragment">
+                        <td>8</td>
+                        <td>2</td>
+                    </tr>
+                    <tr class="fragment">
+                        <td>16</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+              </table>
+            </section>
+            <section>
+                <h2>Laundry: Time Complexity</h2>
+                <p class="green">How long does the algorithm take?</p>
+                <p class="fragment">If N = items of clothing,<br> it takes (N*0 + 2) => O(2) => O(1).<br>
+                <img src="IMAGE">
+               </p>
+               <!-- even if you are slower, it is STILL constant -->
+            </section>
+
+
+            <section>
+              <h2>Example: Hanging up Laundry v2</h2>
               <ol>
                 <li>Dump laundry on bed.
                 <li>Pick up each piece of clothing, put in a pile for that type ("shirts", "underwear", "socks", etc.)
@@ -142,7 +195,7 @@
               </ol>
             </section>
             <section>
-              <h2>Hanging Up Laundry: Code</h2>
+              <h2>Hanging Up Laundry v2: Code</h2>
               <pre><code>
             var piles = {'shirts': [], 'socks': []}
 
@@ -157,7 +210,7 @@
             }</code></pre>
             </section>
             <section>
-              <h2>Laundry: Time Complexity</h2>
+              <h2>Laundry v2: Time Complexity</h2>
               <p class="green">How long does the algorithm take?</p>
               <p class="fragment">
                 Putting an item in a pile takes 10 seconds.
@@ -188,7 +241,7 @@
               </table>
             </section>
             <section>
-                <h2>Laundry: Time Complexity</h2>
+                <h2>Laundry v2: Time Complexity</h2>
                 <p class="green">How long does the algorithm take?</p>
                 <p class="fragment">If N = items of clothing,<br> it takes (N*10 + N*30) => O(N).<br>
                 <img src="http://dl.dropbox.com/u/10998095/Screenshots/8o-1jfj7nvw3.png">
@@ -196,7 +249,7 @@
                <!-- even if you are slower, it is STILL linear -->
             </section>
             <section>
-              <h2>Laundry v2</h2>
+              <h2>Laundry v3</h2>
               <p><span class="green">Addition</span>: We hang up our items in sorted order in the closet.</p>
 
               <pre><code>
@@ -218,7 +271,7 @@
             }</code></pre>
             </section>
             <section>
-              <h2>Laundry v2: Time Complexity</h2>
+              <h2>Laundry v3: Time Complexity</h2>
               <p>Now we must loop through closet section items
                 <strong class="green">each time</strong> we hang up an item.<br>Each look at an item takes 2 seconds.
               </p>
@@ -256,7 +309,7 @@
               <br>
             </section>
             <section>
-              <h2>Laundry v2: Time Complexity</h2>
+              <h2>Laundry v3: Time Complexity</h2>
                <p class="fragment">
                 If N = # items of clothing and # items in section,
                 <br>it takes (N*10 + N*30 + N*N*2) => O(N^2)
@@ -321,6 +374,9 @@
               </table></pre>
               <!-- graph of them? -->
             </section>
+
+            <!-- END OF TIME COMPLEXITY -->
+           
             <section>
               <h2>Laundry: Space Complexity</h2>
               <p>How much space does our algorithm require?</p>
