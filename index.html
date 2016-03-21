@@ -432,10 +432,13 @@
             </section>
             <section>
               <h2>Sequence Algorithms</h2>
-              <p>Many items operate on sequences (lists/arrays)</p>
+              <p>Many items operate on lists of things</p>
+              <p>In programming, basic lists are called arrays</p>
+              <br>
+              <code class="fragment">[4, Q, 5, A, J, 10, K]</code>
+              <br>
               <br>
               <p class="fragment">What sort of algorithms do you do on a deck of cards?<br>
-              <code>[4, Q, 5, A, J, 10, K]</code>
               </p>
               <br>
               <p class="fragment">Sort, search, shuffle, etc.</p>
@@ -444,17 +447,18 @@
               <h2>Sorting Algorithms</h2>
               <br>
               <p>Rearrange items in a sequence by some property about each item.<br>(like numerical or alphabetical order)</p><br>
-              <p class="fragment">
+              <code class="fragment">
               [4, Q, 5, A, J, 10, K]
-              </p>
-              <p class="fragment">
-                -&gt;<br>
+              </code>
+              <br><p class="fragment">-&gt;</p>
+              <code class="fragment">
                 [A, 4, 5, 10, J, Q, K]
-              </p>
+              </code>
             </section>
             <section>
               <h2>Bubble Sort</h2>
               <p>A simple but not very efficient sorting algorithm.</p>
+              <img>PUT IMAGE HERE<img>
               <object
              classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
              codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0"
@@ -482,7 +486,7 @@
               <br>
               <ul>
                 <li>Line up randomly.</li>
-                <li>Sort by height using bubble sort.</li>
+                <li>Sort by [something secret] using bubble sort.</li>
               </ul>
             </section>
             <section>
@@ -516,18 +520,17 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Already sorted array</td>
-                        <td>Reverse sorted array</td>
+                        <td class="fragment">
+                            Already sorted array </br>
+                            N comparisons.</br>
+                            O(N)
+                        </td>
+                        <td class="fragment">
+                            Reverse sorted array</br>
+                            N*N comparisons.</br>
+                            O(N<sup>2</sup>)
+                        </td>
                     </tr>
-                    <tr>
-                        <td>N comparisons.</td>
-                        <td>N*N comparisons.</td>
-                    </tr>
-                    <tr>
-                        <td>O(N)</td>
-                        <td>O(N<sup>2</sup>)</td>
-                    </tr>
-                    <tr>
                 </tbody>
             </table>
               <!-- TODO: gif of rabbits and turtles -->
@@ -536,7 +539,8 @@
                 <h2>Bubble Sort:</h2>
                 <h3>Space Complexity</h3>
                 <br>
-                <p>Only requires 1 extra temporary variable.</p>
+                <p class="fragment">Only requires 1 extra temporary variable.</p>
+
             </section>
             <section>
                 <h2>More Sort Algorithms</h2>
