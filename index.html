@@ -15,12 +15,15 @@
     <link rel="stylesheet" href="reveal/css/reveal.css">
     <link rel="stylesheet" href="reveal/css/theme/simple.css" id="theme">
 
+
     <!-- For syntax highlighting -->
     <!-- light editor-->
     <link rel="stylesheet" href="reveal/lib/css/light.css">
     <!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
     <link rel="stylesheet" href="css/slides.css">
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <link rel="stylesheet" href="css/algorithms.css">
+
     <script>
     if (window.location.search.match(/print-pdf/gi)) {
         var link = document.createElement('link');
@@ -150,21 +153,25 @@
             <section>
                 <h3>Time Efficient Grocery Shopping</h2>
                 <br>
-                <ol>
+                <ol class="fragment">
                     <li>Drive large car to grocery store</li>
                     <li>Buy every thing you need</li>
                 </ol>
+                <br><br>
+                <p class="fragment green">Saves time, but requires you to have a large car</p>
             </section>
 
             <section>
                 <h3>Space Efficient Grocery Shopping</h2>
                 <br>
-                <ol>
+                <ol class="fragment">
                     <li>Walk to grocery store with tote bag</li>
                     <li>Buy one item</li>
                     <li>Walk home and drop off the item</li>
                     <li>Repeat until done</li>
                 </ol>
+                <br><br>
+                <p class="fragment green">Takes a long time, but doesn't require a carD</p>
             </section>
 
             <section>
@@ -193,28 +200,32 @@
               <p class="fragment">
                 Dumping out my laundry takes 2 seconds
               </p>
-              <table class="fragment" style="margin:auto; background:white; padding: 5px;">
+              <div class="fragment">
+              <hr>
+              <table style="margin:auto; background:white; padding: 5px;">
                 <thead>
-                    <tr>
-                        <th># items</th>
-                        <th># Seconds</th>
+                    <tr class="orange">
+                        <th>#items</th>
+                        <th>#seconds</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="fragment">
+                    <tr>
                         <td>4</td>
                         <td>2</td>
                     </tr>
-                    <tr class="fragment">
+                    <tr>
                         <td>8</td>
                         <td>2</td>
                     </tr>
-                    <tr class="fragment">
+                    <tr>
                         <td>16</td>
                         <td>2</td>
                     </tr>
                 </tbody>
               </table>
+              <hr>
+              </div>
                 <p class="fragment">If N = items of clothing,<br> it takes (N*0 + 2) => O(2) => O(1).<br>
                 <img src="IMAGE">
                </p>
@@ -253,28 +264,32 @@
                 <br>
                 Hanging an item up takes 30 seconds.
               </p>
-              <table class="fragment" style="margin:auto; background:white; padding: 5px;">
-                <thead>
-                    <tr>
-                        <th># items</th>
-                        <th># Seconds</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="fragment">
-                        <td>4</td>
-                        <td>(4*10 + 4*30) = 160</td>
-                    </tr>
-                    <tr class="fragment">
-                        <td>8</td>
-                        <td>(8*10 + 8*30) = 320</td>
-                    </tr>
-                    <tr class="fragment">
-                        <td>16</td>
-                        <td>(16*10 + 16*30) = 640</td>
-                    </tr>
-                </tbody>
-              </table>
+              <div class="fragment">
+                <hr>
+                  <table style="margin:auto; background:white; padding: 5px;">
+                    <thead>
+                        <tr class="orange">
+                            <th>#items</th>
+                            <th>#seconds</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>4</td>
+                            <td>(4*10 + 4*30) = 160</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>(8*10 + 8*30) = 320</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>(16*10 + 16*30) = 640</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+              </div>
                 <p class="fragment">If N = items of clothing,<br> it takes (N*10 + N*30) => O(N).<br>
                 <img src="http://dl.dropbox.com/u/10998095/Screenshots/8o-1jfj7nvw3.png">
                </p>
